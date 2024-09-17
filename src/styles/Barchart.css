@@ -1,0 +1,27 @@
+/* src/styles/Barchart.css */
+
+:root {
+     --custom-dark-blue: #17153B;
+}
+
+.h1 {
+     color: var(--custom-dark-blue);
+}
+
+.chart-container {
+     height: 300px;
+     width: 50%;
+}
+
+.Mainheading {
+     text-align: center;
+     margin-top: 2%;
+}
+
+.chart-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     margin-top: 5%;
+     margin-left: 5%;
+}

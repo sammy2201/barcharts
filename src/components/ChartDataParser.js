@@ -1,3 +1,4 @@
+import "../styles/Barchart.css";
 export const parseApiData = (data) => {
   const charts = [];
 
@@ -19,8 +20,8 @@ export const parseApiData = (data) => {
               {
                 label: `Values for ${yearKey}-${monthKey}`,
                 data: values,
-                backgroundColor: "rgba(75, 192, 192, 0.6)",
-                borderColor: "rgba(75, 192, 192, 1)",
+                backgroundColor: "rgba(205, 193, 255, 1)",
+                borderColor: "rgba(165, 148, 249, 1)",
                 borderWidth: 1,
               },
             ],

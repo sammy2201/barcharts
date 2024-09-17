@@ -3,6 +3,7 @@ import axios from "axios";
 import ChartDisplay from "./ChartDisplay";
 import Loading from "./Loading";
 import { parseApiData } from "./ChartDataParser";
+import "../styles/Barchart.css";
 
 const BarChart = () => {
   const [chartData, setChartData] = useState(null);
@@ -22,11 +23,13 @@ const BarChart = () => {
 
   return (
     <div>
-      <h2>Bar Charts from API Data</h2>
+      <h2 className="Mainheading">Bar Charts from API Data</h2>
       {chartData ? (
-        chartData.map((data, index) => (
-          <ChartDisplay key={index} chartData={data} />
-        ))
+        <div className="chart-wrapper">
+          {chartData.map((data, index) => (
+            <ChartDisplay key={index} chartData={data} />
+          ))}
+        </div>
       ) : (
         <Loading />
       )}

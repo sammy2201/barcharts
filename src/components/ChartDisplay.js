@@ -6,6 +6,7 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
+import "../styles/Barchart.css";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale);
 
@@ -22,7 +23,11 @@ const ChartDisplay = ({ chartData }) => {
     },
   };
 
-  return <Bar data={chartData} options={options} />;
+  return (
+    <div className="chart-container">
+      <Bar data={chartData} options={options} />
+    </div>
+  );
 };
 
 export default ChartDisplay;
