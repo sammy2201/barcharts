@@ -6,7 +6,7 @@ import { parseApiData } from "./ChartDataParser";
 import "../styles/Barchart.css";
 
 const BarChart = () => {
-  const [chartData, setChartData] = useState(null);
+  const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
     axios
@@ -24,11 +24,14 @@ const BarChart = () => {
   return (
     <div>
       <h2 className="Mainheading">Bar Charts from API Data</h2>
-      {chartData ? (
+      {chartData.length > 0 ? (
         <div className="chart-wrapper">
-          {chartData.map((data, index) => (
-            <ChartDisplay key={index} chartData={data} />
-          ))}
+          {chartData.map((item, index) => {
+            console.log(item.labels);
+            return (
+              <ChartDisplay key={index} chartData={item} year={item.year} />
+            );
+          })}
         </div>
       ) : (
         <Loading />

@@ -1,4 +1,3 @@
-import "../styles/Barchart.css";
 export const parseApiData = (data) => {
   const charts = [];
 
@@ -15,6 +14,7 @@ export const parseApiData = (data) => {
           }
 
           charts.push({
+            year: yearKey, // Set the year
             labels,
             datasets: [
               {
