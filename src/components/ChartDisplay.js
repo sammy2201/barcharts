@@ -14,7 +14,7 @@ ChartJS.register(BarElement, CategoryScale, LinearScale);
 const ChartDisplay = ({ chartData, year }) => {
   const parts = chartData.labels[0].split("/");
   const options = {
-    responsive: true,
+    //to mark labels for x,y axis.
     scales: {
       x: {
         beginAtZero: true,

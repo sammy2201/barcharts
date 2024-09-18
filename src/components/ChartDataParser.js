@@ -5,7 +5,7 @@ export const parseApiData = (data) => {
     for (let [yearKey, months] of Object.entries(year)) {
       for (let month of months) {
         const labels = [];
-        const values = [];
+        const values = []; //values for barchart
         for (let [monthKey, dates] of Object.entries(month)) {
           for (let dateEntry of dates) {
             const [date, value] = Object.entries(dateEntry)[0];
